@@ -12,7 +12,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="conainer-fluid bg-info text-center py-3 mb-3">Header</div>
+    <!-- <div class="conainer-fluid bg-info text-center py-3 mb-3">Header</div>
     <div class="container">
       <div class="row px-5 text-center">
         <div class="col-3 p-0">
@@ -20,6 +20,7 @@
           <div class="bg-warning py-3 mb-3 text-center">2</div>
           <div class="bg-warning py-3 mb-3 text-center">3</div>
         </div>
+
         <div class="col-6">
           <div class="py-5 mb-3 text-center bg-primary">1</div>
           <div class="py-5 text-center bg-success">2</div>
@@ -37,10 +38,121 @@
       </div>
     </div>
 
+    <form>
+      <div class="mb-3">
+        <label for="nom" class="form-label">Nom</label>
+        <input type="text" class="form-control" id="nom" />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="email" />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Sujet</label>
+        <select
+          class="form-select"
+          id="inputGroupSelect03"
+          aria-label="Example select with button addon"
+        >
+          <option selected>Support</option>
+          <option value="1">Support</option>
+          <option value="2">Demande d'info</option>
+          <option value="3">Autre</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="nom" class="form-label">Message</label>
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+        ></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Envoyer</button>
+    </form> -->
+
+    <!-- <form
+      style="
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      "
+    >
+      <div class="mb-3">
+        <div class="mb-3">
+          <label class="form-check-label" for="exampleCheck1">Genre</label>
+        </div>
+        <div class="ms-3">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+          />
+          <label class="form-check-label" for="exampleCheck1">Femme</label>
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+          />
+          <label class="form-check-label" for="exampleCheck1">homme</label>
+          <br />
+          <br />
+          <div>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label">J'accepte les CGU</label>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-success mb-4" type="submit">Soumettre</button>
+    </form>
+
+    <form action="">
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control me-4 mb--"
+          placeholder="Prénom"
+        />
+        <input type="text" class="form-control ms-3" placeholder="Nom" />
+      </div>
+    </form> -->
+    <div id="formContainer">
+      <form action="" id="form">
+        <div>
+          <input type="text" id="disabledTextInput" class="form-control mt-4" />
+        </div>
+      </form>
+      <button id="inputWrapper" class="mb-5">correct</button>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const input = document.getElementById("disabledTextInput");
+      const wrapper = document.getElementById("inputWrapper");
+
+      wrapper.addEventListener("click", () => {
+        input.disabled = !input.disabled;
+        if (input.disabled === false) {
+          input.style.backgroundColor = "#E7E9EB";
+          input.focus();
+        } else {
+          input.disabled === true;
+          input.style.backgroundColor = "unset";
+          input.style.border = "none";
+        }
+      });
+    </script>
   </body>
 </html>
